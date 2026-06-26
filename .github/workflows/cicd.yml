@@ -23,7 +23,7 @@ jobs:
         run: echo "testing the application"
 
   deploy:
-    needs: test
+    needs: [build,test]
     runs-on: ubuntu-24.04-arm
     steps:
       - name: Deploying on the code
